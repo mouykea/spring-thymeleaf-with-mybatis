@@ -52,12 +52,6 @@ public interface UserRepository {
 			+ " WHERE user_hash=#{user.user_hash}")
 	public boolean update(@Param("user") User user);
 	
-	
-	/*@Select("SELECT COUNT(gender)"
-			+ "from users WHERE gender='Male',"
-			+ "GROUP BY id")
-	public boolean userDetail(@Param("user") User user);*/
-	
 	@Select("SELECT"
 			+ " id,"
 			+ " username, "

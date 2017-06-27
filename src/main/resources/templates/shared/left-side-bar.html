@@ -1,17 +1,17 @@
- <div class="be-left-sidebar" style="margin-top:40px;" >
+ <div class="be-left-sidebar" style="margin-top:40px; font-family: "Khmer OS Battambang","DaunPenh (Body CS)";" >
         <div class="left-sidebar-wrapper">
           <div class="left-sidebar-spacer">
             <div class="left-sidebar-scroll">
               <div class="left-sidebar-content">
                 <ul class="sidebar-elements">
-                  <li class="divider">Menu</li>
-                  <li class="active"><a th:href="@{/dashboard}"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
+                  <li class="divider"><p th:text="#{menu}"></p></li>
+                  <li class="active"><a th:href="@{/dashboard}"><i class="icon mdi mdi-home"></i><span th:text="#{dashboard}"></span></a>
                   </li>
-                  <li class="parent"><a href="#"><i class="icon mdi mdi-face"></i><span>User</span></a>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-face"></i><span th:text="#{user}"></span></a>
                     <ul class="sub-menu">
-                      <li><a th:href="@{/user-list}">User List</a>
+                      <li><a th:href="@{/user-list}"><p th:text="#{userlist}"></p></a>
                       </li>
-                      <li><a th:href="@{/user-cu}">Add User</a>
+                      <li><a th:href="@{/user-cu}"><p th:text="#{useradd}"></p></a>
                       </li>
                      
                     </ul>
@@ -19,11 +19,11 @@
                   
                   
                 
-                  <li class="parent"><a href="#"><i class="icon mdi mdi-layers"></i><span>Role</span></a>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-layers"></i><span th:text="#{role}"></span></a>
                     <ul class="sub-menu">                     
-                      <li><a th:href="@{/role-list}">Role List</a>
+                      <li><a th:href="@{/role-list}"><p th:text="#{rolelist}"></p></a>
                       </li>                                
-                      <li><a th:href="@{/role-cu}">Add Role</a>
+                      <li><a th:href="@{/role-cu}"><p th:text="#{addrole}"></p></a>
                       </li>                  
                     </ul>
                   </li>
