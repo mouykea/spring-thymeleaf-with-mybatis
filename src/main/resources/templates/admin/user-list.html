@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User List</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style type="text/css">
 tr:nth-child(even){
 background:#fbeaee;
@@ -32,7 +33,7 @@ background: pink;
 		 					<th th:text="#{email}">Email</th>
 		 					<th th:text="#{phonenumber}">Phone Number</th>
 		 					<th>Status</th>
-		 					<th colspan="3">Action</th>
+		 					<th colspan="3" >Action</th>
 		 				</tr>
 		 			</thead>
 		 			<tbody>
@@ -42,7 +43,7 @@ background: pink;
 		 					<td th:text="${usr.gender}"></td>
 		 					<td th:text="${usr.email}"></td>
 		 					<td th:text="${usr.phonenumber}"></td>
-		 					<td th:text="${usr.status}"></td>
+		 					<td><span class="glyphicon glyphicon-ok-sign" aria-hidden="true" style="color:green;" th:text="${usr.status}"></span></td>
 		 					<td >
 		 						<a th:href="@{/user-detail/{userHash}(userHash=${usr.user_hash})}"><i class="glyphicon glyphicon-user" style="color: pink; font-size:20px;"></i></a>
 		 					</td>

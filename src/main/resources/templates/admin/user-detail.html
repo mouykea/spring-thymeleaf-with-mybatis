@@ -5,6 +5,14 @@
 		layout:decorator="/admin/admin-layout">
 <meta charset="ISO-8859-1">
 <title>User Detail</title>
+<style>
+tr > td > p{
+padding-bottom:30px;
+
+}
+
+
+</style>
 </head>
 <body>
 	<div layout:fragment="content"> 
@@ -12,13 +20,24 @@
 		 	<div class="main-content container-fluid">
 		 		<div style="margin-top:100px;">
 					<fieldset>
-						<legend align="center" style="padding:20px;font-size:30px;">User Detail</legend>
-						<div th:object="${USER}" style="padding:30px;">
-							<p style="font-size:20px;"><span>User Name : </span>&nbsp;&nbsp;&nbsp;<span th:text="*{username}"></span></p>
-							<p style="font-size:20px;"><span>Gender : </span>&nbsp;&nbsp;&nbsp;<span th:text="*{gender}"></span></p>
-							<p style="font-size:20px;"><span>Email : </span>&nbsp;&nbsp;&nbsp;<span th:text="*{email}"></span></p>
-							<p style="font-size:20px;"><span>Phone Number : </span>&nbsp;&nbsp;&nbsp;<span th:text="*{phonenumber}"></span></p>
-						</div>
+						<legend align="center" style="padding:20px;font-size:30px; border-bottom: 2px solid pink;">User Detail</legend>
+						<table th:object="${USER}" style="padding:40px; font-size:16px;'">
+							<tr>
+								<td style="padding:50px;">
+									<p style="font-size:20px;"><span th:text="#{username}"></span></p>
+									<p style="font-size:20px;"><span th:text="#{gender}"></span></p>
+									<p style="font-size:20px;"><span th:text="#{email}"></span></p>
+									<p style="font-size:20px;"><span th:text="#{phonenumber}"></span></p>
+								</td>
+								<td style="padding:50px;">
+									<span th:text="*{username}"></span></p>
+									<span th:text="*{gender}"></span></p>
+									<span th:text="*{email}"></span></p>
+									<span th:text="*{phonenumber}"></span></p>
+							
+								</td>
+							</tr>
+						</table>
 					</fieldset>
 				</div>
 			</div>

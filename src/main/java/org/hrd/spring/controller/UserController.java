@@ -49,6 +49,7 @@ public class UserController {
 	public String userCU(ModelMap model){
 		model.put("USER", new User());
 		model.put("ACTION", "/add-user");
+		
 		return ("/admin/user-cu");
 	}
 	
@@ -74,6 +75,7 @@ public class UserController {
 	public String addUser(@ModelAttribute User user){
 		String uuid = UUID.randomUUID().toString();
 		user.setUser_hash(uuid);
+		user.setStatus("Active");
 		userService.save(user);
 		return "redirect:/user-list";
 	}
@@ -86,6 +88,7 @@ public class UserController {
 	
 	@PostMapping("/update-user")
 	public String updateUserByHashCode(@ModelAttribute("user") User user, ModelMap map){
+	user.setStatus("Active");
 	userService.updateUser(user);
 	map.put("USER", userService.findAll());
 	return "redirect:/user-list";
