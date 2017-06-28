@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="/admin/admin-layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>User List</title>
+<style type="text/css">
+tr:nth-child(even){
+background:#fbeaee;
+}
+
+tr>th{
+background: pink;
+}
+</style>
+</head>
+<body>
+	<div layout:fragment="content"> 
+		<div class="be-content">
+		 	<div class="main-content container-fluid">
+		 		<div style="margin-top:100px;">
+		 			<table class="table table-stripped">
+		 			<thead>
+		 				<tr>
+		 					<th>ID</th>
+		 					<th>User Name</th>
+		 					<th>Gender</th>
+		 					<th>Date of Birth</th>
+		 					<th>Place of Birth</th>
+		 					<th>Position</th>
+		 				</tr>
+		 			</thead>
+		 			<tbody>
+		 				<tr>
+		 					<td>0001</td>
+		 					<td>Vong Dara</td>
+		 					<td>Male</td>
+		 					<td>12/01/1993</td>
+		 					<td>PP</td>
+		 					<td>General Manager</td>
+		 				</tr>
+		 				
+		 				<tr>
+		 					<td>0002</td>
+		 					<td>Vong Dara</td>
+		 					<td>Male</td>
+		 					<td>12/01/1993</td>
+		 					<td>PP</td>
+		 					<td>Accountant</td>
+		 				</tr>
+		 				<tr>
+		 					<td>0003</td>
+		 					<td>Vong Dara</td>
+		 					<td>Male</td>
+		 					<td>12/01/1993</td>
+		 					<td>PP</td>
+		 					<td>IT</td>
+		 				</tr>
+		 				
+		 			</tbody>
+		 			</table>
+		 		</div>
+		 	
+		 	</div>
+		 </div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="/admin/admin-layout">
+<meta charset="ISO-8859-1">
+<title>Add User</title>
+</head>
+<body>
+	<div layout:fragment="content"> 
+		<div class="be-content">
+		 	<div class="main-content container-fluid">
+		 		<div style="margin-top:100px;">
+						<div class="container-fluid">
+        
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Add Role Form</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    					<Label th:text="#{id}">ID</Label>
+			                <input type="text" name="id" id="first_name" class="form-control input-sm" placeholder="ID">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<Label th:text="#{rolename}">Role Name</Label>
+			    						<input type="text" name="role_name" id="role_name" class="form-control input-sm" placeholder="Role Name">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			<button class="btn btn-info btn-block" th:text="#{register}"></button>
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>
+			
+</body>
+</html>

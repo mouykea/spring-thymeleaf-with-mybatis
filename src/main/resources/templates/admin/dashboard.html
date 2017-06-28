@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="/admin/admin-layout">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+</head>
+<body>
+	
+			<div layout:fragment="content"> 
+			<div class="be-content">
+		 	<div class="main-content container-fluid" style="text-align: center;">
+		 		<div class="col-sm-1"></div>
+		 		<div class="col-sm-3">
+		 			<img alt="total user" src="/assets/img/gender-total.png" style="height: 150px; width:150px; margin-top: 100px;">
+		 				<div style="margin-top :20px; color: red;">
+				 			<span th:text="#{totaluser}">:</span>
+				 			<span th:text="${TOTAL}"></span> 
+		 				</div>
+		 			</div>
+		 		<div class="col-sm-1"></div>
+		 		<div class="col-sm-3">
+		 			<img alt="female user" src="/assets/img/ma-icon.png" style="height: 150px; width:150px; margin-top: 100px;">
+		 				<div style="margin-top :20px; color: blue;">
+				 			<span th:text="#{totalmale}">:</span>
+				 			<span th:text="${CM}"></span> 
+		 				</div>
+		 		</div>
+		 		<div class="col-sm-1"></div>
+		 		<div class="col-sm-3">
+		 			<img alt="female user" src="/assets/img/fe-icon.png" style="height: 150px; width:150px; margin-top: 100px;">
+		 				<div style="margin-top :20px; color: purple;">
+				 			<span th:text="#{totalfemale}"></span>
+				 			<span th:text="${CF}"></span> 
+		 				</div>
+		 		</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
